@@ -7,9 +7,10 @@ Spring Boot uygulaması içinden `ProcessBuilder` ile Windows komut satırı (`c
 > **Not:** Bu depo 2018 yılında deneme amacıyla yazıldı ve artık güncellenmiyor. Bağımlılıkları eskidir ve
 > bilinen güvenlik açıkları içerir.
 
-> **Uyarı:** Uygulama, kimlik doğrulaması olmayan HTTP uçlarından gelen bir kullanıcı adını doğrudan
-> `cmd.exe` komutuna ekliyor. Bu, komut enjeksiyonuna ve yetki yükseltmeye açıktır. Yalnızca kapalı bir
-> test makinesinde, ne yaptığını bilerek çalıştırın; hiçbir ağa açmayın.
+> **Uyarı:** Uçlarda kimlik doğrulaması yok ve makinenin yönetici grubunu değiştiriyorlar. Kullanıcı adı
+> sıkı bir desenle doğrulanır ve komut kabuk üzerinden değil argüman dizisiyle `net.exe`'ye verilir
+> (komut enjeksiyonu kapatıldı); sunucu varsayılan olarak yalnızca `127.0.0.1` adresini dinler. Yine de
+> yalnızca kapalı bir test makinesinde, ne yaptığını bilerek çalıştırın; hiçbir ağa açmayın.
 
 ## İçerik
 
